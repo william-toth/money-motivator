@@ -27,3 +27,4 @@ dist-ssr
 # Files with secrets
 test.sh
 debug.sh
+debug2.sh

@@ -58,7 +58,7 @@ jobs:
             -H "x-goog-api-version: 2" \
             -X PUT \
             -T extension.zip \
-            "https://www.googleapis.com/upload/chromewebstore/v1.1/items/${{ secrets.CHROME_EXTENSION_ID }}")
+            "https://www.googleapis.com/upload/chromewebstore/v1.1/items/${{ secrets.CHROME_EXTENSION_ID }}?projection=DRAFT")
           
           HTTP_CODE=$(echo "$UPLOAD_RESPONSE" | tail -n1)
           RESPONSE_BODY=$(echo "$UPLOAD_RESPONSE" | sed '$d')
